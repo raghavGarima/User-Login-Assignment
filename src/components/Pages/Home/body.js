@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import './home.css'
 import TextField from '@mui/material/TextField';
 import {DataTable} from './UserData'
-export const BodyComponent=({rows,filtertype,setEdit})=>{
+export const BodyComponent=({rows,filtertype,setEdit,handleDelete})=>{
   const [origin,setOrigin]=useState([])
   const [search,setSearch]=useState('')
     
@@ -42,7 +42,7 @@ return(
   Search :   <TextField id="outlined-basic" value={search} onChange={(event)=>{handleSearch(event)}}  variant="outlined"  size="small" style={{width:'25%',    marginLeft: '8px'}} />
 </Box>
 <Box>
-<DataTable rows={origin} setEdit={setEdit}/>
+<DataTable rows={origin} setEdit={setEdit} handleDelete={handleDelete}/>
 </Box>
  
  </Box>

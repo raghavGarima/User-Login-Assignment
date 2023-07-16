@@ -19,6 +19,7 @@ export const HeaderComponent=({handleOpen,hadleSelectedRole})=>{
 return(
   <div className="headerDiv">
     <p className="headerText">Users</p>
+    <div className="headerBtnsDIv">
     <Button variant="outlined" startIcon={<ManageAccountsIcon />} onClick={handleOpen}>
         Add User
       </Button>
@@ -44,6 +45,7 @@ return(
         <MenuItem onClick={()=>handleClose('Author')}>Author</MenuItem>
         <MenuItem onClick={()=>handleClose('Editor')}>Editor</MenuItem>
       </Menu>
+      </div>
   </div>
 )
 }

@@ -21,7 +21,7 @@ const columns = [
 
 
 
-export function DataTable({rows,setEdit}){
+export function DataTable({rows,setEdit,handleDelete}){
   const [count,setCount]=useState(1)
   const [dataToShow,setDataToShow]=useState([])
   useEffect(()=>{
@@ -67,7 +67,7 @@ setDataToShow(rows.slice(cal-6,cal))
               <TableCell >{row.role}</TableCell>
               <TableCell >{row.type}</TableCell>
               <TableCell >{row.status}</TableCell>
-              <TableCell><EditIcon style={{    color: '#65ade1',    marginRight: '5px'}} onClick={()=>setEdit(row)}  /><DeleteIcon style={{    color: 'red'}} /></TableCell>
+              <TableCell><EditIcon style={{    color: '#65ade1',    marginRight: '5px'}} onClick={()=>setEdit(row)}  /><DeleteIcon style={{    color: 'red'}} onClick={()=>handleDelete(row)} /></TableCell>
             </TableRow>
           ))}
         </TableBody>

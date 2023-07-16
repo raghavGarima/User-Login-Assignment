@@ -56,3 +56,14 @@
     width: 100%;
     margin-bottom: 14px;
   }
+  .headerBtnsDIv{display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 2px;}
+
+
+    @media screen and (max-width: 450px){
+      .headerBtnsDIv{
+        flex-direction: column;
+      }
+    }

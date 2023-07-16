@@ -38,7 +38,7 @@ export const MainFile=()=>{
     setOpen(true);
   }
   const handleEditUser=(data)=>{
-    debugger
+    
     let editData=rows.map((ele)=>{
       if(ele.id==data.id){
         return data;
@@ -53,11 +53,22 @@ export const MainFile=()=>{
     setEdit([])
     handleClose()
   }
+
+  const handleDelete=(data)=>{
+    let editData=rows.filter((ele)=>{
+      if(ele.id!==data.id){
+        return data;
+      }     
+    })
+  
+    setRows([...editData])
+    
+  }
 return(
   <>
     <HeaderComponent handleOpen={handleOpen} hadleSelectedRole={hadleSelectedRole} />
-    <BodyComponent rows={rows} filtertype={filtertype} setEdit={handleEdit} />
-    <BasicModal open={open} addNewUser={addNewUser} handleClose={handleClose} id={rows.length} edit={edit} handleEditUser={handleEditUser}/>
+    <BodyComponent rows={rows} filtertype={filtertype} setEdit={handleEdit}  handleDelete={handleDelete}/>
+    <BasicModal open={open} addNewUser={addNewUser} handleClose={handleClose} id={rows} edit={edit} handleEditUser={handleEditUser}/>
   </>
 )
 }

@@ -39,7 +39,7 @@ export default function BasicModal({open, addNewUser,handleClose,id,edit,handleE
   },[edit])
 
   const handleSubmit=()=>{if(edit.length==0){
-    let data= { id: id+1, email: email, name: name,role:role ,type:type,status:status}
+    let data= { id: id[id.length-1].id+1, email: email, name: name,role:role ,type:type,status:status}
     addNewUser(data)
   }
   else{
