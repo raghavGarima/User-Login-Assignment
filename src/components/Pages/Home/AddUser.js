@@ -28,7 +28,7 @@ export default function BasicModal({open, addNewUser,handleClose,id,edit,handleE
   const [type,setType]=React.useState("")
   const [status, setStatus] = React.useState('');
   React.useEffect(()=>{
-    debugger
+    
     if(edit.length>0){
       setName(edit[0].name)
       setEmail(edit[0].email)

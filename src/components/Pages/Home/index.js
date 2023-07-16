@@ -33,7 +33,7 @@ export const MainFile=()=>{
 
   }
   const handleEdit=(data)=>{
-    debugger
+    
     setEdit([{...data}])
     setOpen(true);
   }
