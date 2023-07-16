@@ -13,8 +13,6 @@ const Layout = () => {
   )
 };
 
-
-
 export default function Routing() {
   return (
     <BrowserRouter>
